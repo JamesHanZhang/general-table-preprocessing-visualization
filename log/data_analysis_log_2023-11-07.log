@@ -1,0 +1,645 @@
+UTC/GMT+8hours:2023-11-07 22:40:46.446303
+
+######################## 欢迎使用数据格式转换软件 ###############################
+本软件仅支持excel, markdown, csv文件的互相转换
+根据文件的拓展名(例如.csv, .md, .xlsx)来判断输入输出的文件类型
+########################## 请输入参数并执行程序 #################################
+
+
+UTC/GMT+8hours:2023-11-07 22:42:27.800175
+
+######################## 欢迎使用数据格式转换软件 ###############################
+本软件仅支持excel, markdown, csv文件的互相转换
+根据文件的拓展名(例如.csv, .md, .xlsx)来判断输入输出的文件类型
+########################## 请输入参数并执行程序 #################################
+
+
+UTC/GMT+8hours:2023-11-07 22:43:14.895276
+[PARAMS] parameters initialization from settings, params set file 'DEFAULT.json' is created or overwritten.
+
+UTC/GMT+8hours:2023-11-07 22:43:14.908277
+######################## 围绕参数表'DEFAULT'的数据格式转换程序开始执行 ################################
+
+
+
+
+*************************************************************************
+***                          PROGRAM STARTS                           ***
+***                  TABLE-DATA-FORMAT-TRANSFORM-APP                  ***
+***                           VERSION:2.01                            ***
+***                  e-mail: jameshanzhang@foxmail.com                ***
+*************************************************************************
+link: github.com/JamesHanZhang/table-data-format-transform-app
+UTC/GMT+8hours:2023-11-07 22:43:14.916220
+***************************************************
+[PROGRAM STARTS]: program starts...
+
+UTC/GMT+8hours:2023-11-07 22:43:14.924090
+[PARAMS] parameters initialization from existing params file 'DEFAULT.json'.
+
+UTC/GMT+8hours:2023-11-07 22:43:14.929899
+[COST TIME] the program <markdown reading generator created (using csv reading method)> costed time: 0:00:00
+
+UTC/GMT+8hours:2023-11-07 22:43:14.934907
+[INPUT ENCODING DETECTION] file D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\input_dataset\input_test.md charset detected automatically: utf-8
+
+UTC/GMT+8hours:2023-11-07 22:43:14.939616
+[WARNING]: we turned all datavalues into string type in case losing the precision of data.
+
+UTC/GMT+8hours:2023-11-07 22:43:14.944124
+[ParseError]: ParseError detected not by read_csv, but by self made method.
+Error tokenizing data. C error: EOF inside string starting at row 8.
+
+
+UTC/GMT+8hours:2023-11-07 22:43:14.948113
+[ERROR LINES EXTRACTION] error lines and correct lines are separated into 2 files for further reading.
+
+UTC/GMT+8hours:2023-11-07 22:43:14.953106
+[IMPORT CSV]: data from D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\input_dataset\input_test.md is imported as reader generator for circular import in chunk size 50000.
+
+UTC/GMT+8hours:2023-11-07 22:43:14.957126
+[COST TIME] the program <csv reading generator created> costed time: 0:00:00.023200
+
+UTC/GMT+8hours:2023-11-07 22:43:14.965067
+[COST TIME] the program <basic processing> costed time: 0:00:00
+
+UTC/GMT+8hours:2023-11-07 22:43:14.981325
+[CSV OUTPUT]: file created: D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\output_dataset\test.csv
+
+UTC/GMT+8hours:2023-11-07 22:43:14.985319
+[COST TIME] the program <store as csv> costed time: 0:00:00.010243
+
+UTC/GMT+8hours:2023-11-07 22:43:14.989343
+[NameError] for sql output, file name test.csv must contains extension '.sql' as required.
+
+UTC/GMT+8hours:2023-11-07 22:43:14.993296
+[THE END]: The data analysis process is successfully finished.
+[COST TIME]: The whole process costed time: 0:00:00.073390
+***************************************************
+
+
+
+
+UTC/GMT+8hours:2023-11-07 22:43:15.002274
+[PARAMS] parameters initialization from existing params file 'DEFAULT.json'.
+
+UTC/GMT+8hours:2023-11-07 22:43:15.005737
+######################## 参数表'DEFAULT'的数据转换进程已顺利结束执行 ################################
+
+
+
+UTC/GMT+8hours:2023-11-07 22:43:15.010150
+
+*************************** 免责声明 ******************************
+    本程序遵循MIT开源协议, 如有疑问, 可依据以下链接查看源代码:
+    link: github.com/JamesHanZhang/table-data-format-transform-app
+    请用户自行负责校验数据转换质量
+******************************************************************
+
+
+UTC/GMT+8hours:2023-11-07 22:43:27.296382
+
+######################## 欢迎使用数据格式转换软件 ###############################
+本软件仅支持excel, markdown, csv文件的互相转换
+根据文件的拓展名(例如.csv, .md, .xlsx)来判断输入输出的文件类型
+########################## 请输入参数并执行程序 #################################
+
+
+UTC/GMT+8hours:2023-11-07 22:43:54.366542
+[PARAMS] parameters initialization from settings, params set file 'DEFAULT.json' is created or overwritten.
+
+UTC/GMT+8hours:2023-11-07 22:43:54.374520
+######################## 围绕参数表'DEFAULT'的数据格式转换程序开始执行 ################################
+
+
+
+
+*************************************************************************
+***                          PROGRAM STARTS                           ***
+***                  TABLE-DATA-FORMAT-TRANSFORM-APP                  ***
+***                           VERSION:2.01                            ***
+***                  e-mail: jameshanzhang@foxmail.com                ***
+*************************************************************************
+link: github.com/JamesHanZhang/table-data-format-transform-app
+UTC/GMT+8hours:2023-11-07 22:43:54.381548
+***************************************************
+[PROGRAM STARTS]: program starts...
+
+UTC/GMT+8hours:2023-11-07 22:43:54.390560
+[PARAMS] parameters initialization from existing params file 'DEFAULT.json'.
+
+UTC/GMT+8hours:2023-11-07 22:43:54.395510
+[COST TIME] the program <markdown reading generator created (using csv reading method)> costed time: 0:00:00
+
+UTC/GMT+8hours:2023-11-07 22:43:54.400534
+[INPUT ENCODING DETECTION] file D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\input_dataset\input_test.md charset detected automatically: utf-8
+
+UTC/GMT+8hours:2023-11-07 22:43:54.404487
+[WARNING]: we turned all datavalues into string type in case losing the precision of data.
+
+UTC/GMT+8hours:2023-11-07 22:43:54.408476
+[ParseError]: ParseError detected not by read_csv, but by self made method.
+Error tokenizing data. C error: EOF inside string starting at row 8.
+
+
+UTC/GMT+8hours:2023-11-07 22:43:54.412464
+[ERROR LINES EXTRACTION] error lines and correct lines are separated into 2 files for further reading.
+
+UTC/GMT+8hours:2023-11-07 22:43:54.417486
+[IMPORT CSV]: data from D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\input_dataset\input_test.md is imported as reader generator for circular import in chunk size 50000.
+
+UTC/GMT+8hours:2023-11-07 22:43:54.421441
+[COST TIME] the program <csv reading generator created> costed time: 0:00:00.021941
+
+UTC/GMT+8hours:2023-11-07 22:43:54.429442
+[COST TIME] the program <basic processing> costed time: 0:00:00
+
+UTC/GMT+8hours:2023-11-07 22:43:54.708346
+[EXCEL OUTPUT]: file created: D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\output_dataset\test.xlsx
+
+UTC/GMT+8hours:2023-11-07 22:43:54.712337
+[COST TIME] the program <store as excel> costed time: 0:00:00.273736
+
+UTC/GMT+8hours:2023-11-07 22:43:54.716288
+[NameError] for sql output, file name test.xlsx must contains extension '.sql' as required.
+
+UTC/GMT+8hours:2023-11-07 22:43:54.720314
+[THE END]: The data analysis process is successfully finished.
+[COST TIME]: The whole process costed time: 0:00:00.334742
+***************************************************
+
+
+
+
+UTC/GMT+8hours:2023-11-07 22:43:54.728292
+[PARAMS] parameters initialization from existing params file 'DEFAULT.json'.
+
+UTC/GMT+8hours:2023-11-07 22:43:54.732282
+######################## 参数表'DEFAULT'的数据转换进程已顺利结束执行 ################################
+
+
+
+UTC/GMT+8hours:2023-11-07 22:43:54.736270
+
+*************************** 免责声明 ******************************
+    本程序遵循MIT开源协议, 如有疑问, 可依据以下链接查看源代码:
+    link: github.com/JamesHanZhang/table-data-format-transform-app
+    请用户自行负责校验数据转换质量
+******************************************************************
+
+
+UTC/GMT+8hours:2023-11-07 22:57:46.570265
+您目前采用的模式为: 
+1. <表结构一致模式> 单参数表处理模式, 常用模式, 数据源的表结构一致时采用该模式处理数据转换;
+
+
+UTC/GMT+8hours:2023-11-07 23:00:57.555804
+您目前采用的模式为: 
+1. <表结构一致模式> 单参数表处理模式, 常用模式, 数据源的表结构一致时采用该模式处理数据转换;
+
+
+UTC/GMT+8hours:2023-11-07 23:01:11.905071
+######################## 围绕参数表'DEFAULT'的数据格式转换程序开始执行 ################################
+
+
+
+UTC/GMT+8hours:2023-11-07 23:01:11.917022
+[PARAMS] parameters initialization from settings, params set file 'DEFAULT.json' is created or overwritten.
+
+
+*************************************************************************
+***                          PROGRAM STARTS                           ***
+***                  TABLE-DATA-FORMAT-TRANSFORM-APP                  ***
+***                           VERSION:2.01                            ***
+***                  e-mail: jameshanzhang@foxmail.com                ***
+*************************************************************************
+link: github.com/JamesHanZhang/table-data-format-transform-app
+UTC/GMT+8hours:2023-11-07 23:01:11.931733
+***************************************************
+[PROGRAM STARTS]: program starts...
+
+UTC/GMT+8hours:2023-11-07 23:01:11.940710
+[PARAMS] parameters initialization from settings, params set file 'DEFAULT.json' is created or overwritten.
+
+UTC/GMT+8hours:2023-11-07 23:01:11.946471
+[COST TIME] the program <markdown reading generator created (using csv reading method)> costed time: 0:00:00
+
+UTC/GMT+8hours:2023-11-07 23:01:11.951460
+[INPUT ENCODING DETECTION] file D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\input_dataset\input_test.md charset detected automatically: utf-8
+
+UTC/GMT+8hours:2023-11-07 23:01:11.954491
+[WARNING]: we turned all datavalues into string type in case losing the precision of data.
+
+UTC/GMT+8hours:2023-11-07 23:01:11.958559
+[ParseError]: ParseError detected not by read_csv, but by self made method.
+Error tokenizing data. C error: EOF inside string starting at row 8.
+
+
+UTC/GMT+8hours:2023-11-07 23:01:11.962548
+[ERROR LINES EXTRACTION] error lines and correct lines are separated into 2 files for further reading.
+
+UTC/GMT+8hours:2023-11-07 23:01:11.968007
+[IMPORT CSV]: data from D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\input_dataset\input_test.md is imported as reader generator for circular import in chunk size 50000.
+
+UTC/GMT+8hours:2023-11-07 23:01:11.971995
+[COST TIME] the program <csv reading generator created> costed time: 0:00:00.021494
+
+UTC/GMT+8hours:2023-11-07 23:01:11.979791
+[COST TIME] the program <basic processing> costed time: 0:00:00
+
+UTC/GMT+8hours:2023-11-07 23:01:11.996853
+[CSV OUTPUT]: file created: D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\output_dataset\output_test.csv
+
+UTC/GMT+8hours:2023-11-07 23:01:12.000826
+[COST TIME] the program <store as csv> costed time: 0:00:00.011101
+
+UTC/GMT+8hours:2023-11-07 23:01:12.274399
+[EXCEL OUTPUT]: file created: D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\output_dataset\output_test.xlsx
+
+UTC/GMT+8hours:2023-11-07 23:01:12.278390
+[COST TIME] the program <store as excel> costed time: 0:00:00.263412
+
+UTC/GMT+8hours:2023-11-07 23:01:12.305328
+[MARKDOWN OUTPUT]: file created: D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\output_dataset\output_test.md
+
+UTC/GMT+8hours:2023-11-07 23:01:12.309278
+[COST TIME] the program <store as markdown> costed time: 0:00:00.015957
+
+UTC/GMT+8hours:2023-11-07 23:01:12.335276
+[COST TIME] the program <store as sql table creation> costed time: 0:00:00.007971
+
+UTC/GMT+8hours:2023-11-07 23:01:12.338276
+[COST TIME] the program <store as sql insert commands> costed time: 0:00:00.018987
+
+UTC/GMT+8hours:2023-11-07 23:01:12.342264
+[THE END]: The data analysis process is successfully finished.
+[COST TIME]: The whole process costed time: 0:00:00.404546
+***************************************************
+
+
+
+
+UTC/GMT+8hours:2023-11-07 23:01:12.346218
+######################## 参数表'DEFAULT'的数据转换进程已顺利结束执行 ################################
+
+
+
+UTC/GMT+8hours:2023-11-07 23:01:12.354238
+[PARAMS] parameters initialization from existing params file 'DEFAULT.json'.
+
+UTC/GMT+8hours:2023-11-07 23:01:12.358222
+共计转换数据量为: 6条记录.
+
+UTC/GMT+8hours:2023-11-07 23:01:12.362188
+
+*************************** 免责声明 ******************************
+    本程序遵循MIT开源协议, 如有疑问, 可依据以下链接查看源代码:
+    link: github.com/JamesHanZhang/table-data-format-transform-app
+    请用户自行负责校验数据转换质量
+******************************************************************
+
+
+UTC/GMT+8hours:2023-11-07 23:03:13.329725
+您目前采用的模式为: 
+1. <表结构一致模式> 单参数表处理模式, 常用模式, 数据源的表结构一致时采用该模式处理数据转换;
+
+
+UTC/GMT+8hours:2023-11-07 23:03:21.865317
+您目前采用的模式为: 
+1. <表结构一致模式> 单参数表处理模式, 常用模式, 数据源的表结构一致时采用该模式处理数据转换;
+
+
+UTC/GMT+8hours:2023-11-07 23:03:37.272475
+######################## 围绕参数表'DEFAULT'的数据格式转换程序开始执行 ################################
+
+
+
+UTC/GMT+8hours:2023-11-07 23:03:37.281450
+[PARAMS] parameters initialization from settings, params set file 'DEFAULT.json' is created or overwritten.
+
+
+*************************************************************************
+***                          PROGRAM STARTS                           ***
+***                  TABLE-DATA-FORMAT-TRANSFORM-APP                  ***
+***                           VERSION:2.01                            ***
+***                  e-mail: jameshanzhang@foxmail.com                ***
+*************************************************************************
+link: github.com/JamesHanZhang/table-data-format-transform-app
+UTC/GMT+8hours:2023-11-07 23:03:37.294923
+***************************************************
+[PROGRAM STARTS]: program starts...
+
+UTC/GMT+8hours:2023-11-07 23:03:37.302902
+[PARAMS] parameters initialization from settings, params set file 'DEFAULT.json' is created or overwritten.
+
+UTC/GMT+8hours:2023-11-07 23:03:37.308310
+[COST TIME] the program <markdown reading generator created (using csv reading method)> costed time: 0:00:00
+
+UTC/GMT+8hours:2023-11-07 23:03:37.313333
+[INPUT ENCODING DETECTION] file D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\input_dataset\input_test.md charset detected automatically: utf-8
+
+UTC/GMT+8hours:2023-11-07 23:03:37.317347
+[WARNING]: we turned all datavalues into string type in case losing the precision of data.
+
+UTC/GMT+8hours:2023-11-07 23:03:37.320338
+[ParseError]: ParseError detected not by read_csv, but by self made method.
+Error tokenizing data. C error: EOF inside string starting at row 8.
+
+
+UTC/GMT+8hours:2023-11-07 23:03:37.324327
+[ERROR LINES EXTRACTION] error lines and correct lines are separated into 2 files for further reading.
+
+UTC/GMT+8hours:2023-11-07 23:03:37.329315
+[IMPORT CSV]: data from D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\input_dataset\input_test.md is imported as reader generator for circular import in chunk size 50000.
+
+UTC/GMT+8hours:2023-11-07 23:03:37.334301
+[COST TIME] the program <csv reading generator created> costed time: 0:00:00.022001
+
+UTC/GMT+8hours:2023-11-07 23:03:37.342202
+[COST TIME] the program <basic processing> costed time: 0:00:00
+
+UTC/GMT+8hours:2023-11-07 23:03:37.354739
+[CSV OUTPUT]: file created: D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\output_dataset\output_test.csv
+
+UTC/GMT+8hours:2023-11-07 23:03:37.359478
+[COST TIME] the program <store as csv> costed time: 0:00:00.011292
+
+UTC/GMT+8hours:2023-11-07 23:03:37.362503
+[NameError] for sql output, file name output_test.csv must contains extension '.sql' as required.
+
+UTC/GMT+8hours:2023-11-07 23:03:37.366494
+[THE END]: The data analysis process is successfully finished.
+[COST TIME]: The whole process costed time: 0:00:00.067546
+***************************************************
+
+
+
+
+UTC/GMT+8hours:2023-11-07 23:03:37.370590
+######################## 参数表'DEFAULT'的数据转换进程已顺利结束执行 ################################
+
+
+
+UTC/GMT+8hours:2023-11-07 23:03:37.375541
+[PARAMS] parameters initialization from existing params file 'DEFAULT.json'.
+
+UTC/GMT+8hours:2023-11-07 23:03:37.379128
+共计转换数据量为: 6条记录.
+
+UTC/GMT+8hours:2023-11-07 23:03:37.383112
+
+*************************** 免责声明 ******************************
+    本程序遵循MIT开源协议, 如有疑问, 可依据以下链接查看源代码:
+    link: github.com/JamesHanZhang/table-data-format-transform-app
+    请用户自行负责校验数据转换质量
+******************************************************************
+
+
+UTC/GMT+8hours:2023-11-07 23:03:58.224805
+您目前采用的模式为: 
+2. <结构不一致参数一致模式> 不同表结构数据源转换, 批量模式, 将文件夹下的文件基于同一个参数表分别进行转换;
+    导入的文件名主体默认为导出的文件名主体以及导出的SQL表名;
+
+
+UTC/GMT+8hours:2023-11-07 23:04:23.417184
+######################## 围绕参数表'DEFAULT'的数据格式转换程序开始执行 ################################
+
+
+
+
+*************************************************************************
+***                          PROGRAM STARTS                           ***
+***                  TABLE-DATA-FORMAT-TRANSFORM-APP                  ***
+***                           VERSION:2.01                            ***
+***                  e-mail: jameshanzhang@foxmail.com                ***
+*************************************************************************
+link: github.com/JamesHanZhang/table-data-format-transform-app
+UTC/GMT+8hours:2023-11-07 23:04:23.428150
+***************************************************
+[PROGRAM STARTS]: program starts...
+
+UTC/GMT+8hours:2023-11-07 23:04:23.437098
+[PARAMS] parameters initialization from settings, params set file 'DEFAULT.json' is created or overwritten.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.446392
+[PARAMS] parameters initialization from settings, params set file 'DEFAULT.json' is created or overwritten.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.457783
+[RUNNING FILE DISTINCT TRANSFORMATION] file 'input_test.csv' is being transfered...
+
+UTC/GMT+8hours:2023-11-07 23:04:23.463805
+[PARAMS] parameters initialization from existing params file 'DEFAULT.json'.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.477768
+[PARAMS] parameters initialization from existing params file 'DEFAULT.json'.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.485143
+[INPUT ENCODING DETECTION] file D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\input_dataset\input_test.csv charset detected automatically: utf-8
+
+UTC/GMT+8hours:2023-11-07 23:04:23.489155
+[WARNING]: we turned all datavalues into string type in case losing the precision of data.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.493148
+[ParseError]: ParseError detected not by read_csv, but by self made method.
+Error tokenizing data. C error: EOF inside string starting at row 7.
+
+
+UTC/GMT+8hours:2023-11-07 23:04:23.497133
+[ERROR LINES EXTRACTION] error lines and correct lines are separated into 2 files for further reading.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.502125
+[IMPORT CSV]: data from D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\input_dataset\input_test.csv is imported as reader generator for circular import in chunk size 50000.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.507107
+[COST TIME] the program <csv reading generator created> costed time: 0:00:00.021964
+
+UTC/GMT+8hours:2023-11-07 23:04:23.513091
+[COST TIME] the program <basic processing> costed time: 0:00:00
+
+UTC/GMT+8hours:2023-11-07 23:04:23.529558
+[CSV OUTPUT]: file created: D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\output_dataset\input_test.csv
+
+UTC/GMT+8hours:2023-11-07 23:04:23.532670
+[COST TIME] the program <store as csv> costed time: 0:00:00.009691
+
+UTC/GMT+8hours:2023-11-07 23:04:23.537657
+[NameError] for sql output, file name input_test.csv must contains extension '.sql' as required.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.541646
+[DISTINCT TRANSFORMATION END] file 'input_test.csv' is successfully transfered.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.545660
+[COST TIME] the program <running single file transformation with same params_set> costed time: 0:00:00.087877
+
+UTC/GMT+8hours:2023-11-07 23:04:23.549113
+[RUNNING FILE DISTINCT TRANSFORMATION] file 'input_test2.csv' is being transfered...
+
+UTC/GMT+8hours:2023-11-07 23:04:23.557092
+[PARAMS] parameters initialization from existing params file 'DEFAULT.json'.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.570238
+[PARAMS] parameters initialization from existing params file 'DEFAULT.json'.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.579215
+[INPUT ENCODING DETECTION] file D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\input_dataset\input_test2.csv charset detected automatically: ascii
+
+UTC/GMT+8hours:2023-11-07 23:04:23.583815
+[WARNING]: we turned all datavalues into string type in case losing the precision of data.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.587806
+[IMPORT CSV]: data from D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\input_dataset\input_test2.csv is imported as reader generator for circular import in chunk size 50000.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.591839
+[COST TIME] the program <csv reading generator created> costed time: 0:00:00.016613
+
+UTC/GMT+8hours:2023-11-07 23:04:23.596782
+[COST TIME] the program <basic processing> costed time: 0:00:00
+
+UTC/GMT+8hours:2023-11-07 23:04:23.607753
+[CSV OUTPUT]: file created: D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\output_dataset\input_test2.csv
+
+UTC/GMT+8hours:2023-11-07 23:04:23.611778
+[COST TIME] the program <store as csv> costed time: 0:00:00.005022
+
+UTC/GMT+8hours:2023-11-07 23:04:23.615763
+[NameError] for sql output, file name input_test2.csv must contains extension '.sql' as required.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.618725
+[DISTINCT TRANSFORMATION END] file 'input_test2.csv' is successfully transfered.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.622713
+[COST TIME] the program <running single file transformation with same params_set> costed time: 0:00:00.073600
+
+UTC/GMT+8hours:2023-11-07 23:04:23.627700
+[RUNNING FILE DISTINCT TRANSFORMATION] file 'input_test3.csv' is being transfered...
+
+UTC/GMT+8hours:2023-11-07 23:04:23.637710
+[PARAMS] parameters initialization from existing params file 'DEFAULT.json'.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.653668
+[PARAMS] parameters initialization from existing params file 'DEFAULT.json'.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.661609
+[INPUT ENCODING DETECTION] file D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\input_dataset\input_test3.csv charset detected automatically: utf-8
+
+UTC/GMT+8hours:2023-11-07 23:04:23.665634
+[WARNING]: we turned all datavalues into string type in case losing the precision of data.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.670585
+[ParseError]: ParseError detected not by read_csv, but by self made method.
+Error tokenizing data. C error: EOF inside string starting at row 5.
+
+
+UTC/GMT+8hours:2023-11-07 23:04:23.674609
+[ERROR LINES EXTRACTION] error lines and correct lines are separated into 2 files for further reading.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.681556
+[IMPORT CSV]: data from D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\input_dataset\input_test3.csv is imported as reader generator for circular import in chunk size 50000.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.686543
+[COST TIME] the program <csv reading generator created> costed time: 0:00:00.024933
+
+UTC/GMT+8hours:2023-11-07 23:04:23.693524
+[COST TIME] the program <basic processing> costed time: 0:00:00
+
+UTC/GMT+8hours:2023-11-07 23:04:23.705491
+[CSV OUTPUT]: file created: D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\output_dataset\input_test3.csv
+
+UTC/GMT+8hours:2023-11-07 23:04:23.709481
+[COST TIME] the program <store as csv> costed time: 0:00:00.004987
+
+UTC/GMT+8hours:2023-11-07 23:04:23.713470
+[NameError] for sql output, file name input_test3.csv must contains extension '.sql' as required.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.716497
+[DISTINCT TRANSFORMATION END] file 'input_test3.csv' is successfully transfered.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.720483
+[COST TIME] the program <running single file transformation with same params_set> costed time: 0:00:00.092783
+
+UTC/GMT+8hours:2023-11-07 23:04:23.725438
+[RUNNING FILE DISTINCT TRANSFORMATION] file 'input_test4.csv' is being transfered...
+
+UTC/GMT+8hours:2023-11-07 23:04:23.734414
+[PARAMS] parameters initialization from existing params file 'DEFAULT.json'.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.748419
+[PARAMS] parameters initialization from existing params file 'DEFAULT.json'.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.757353
+[INPUT ENCODING DETECTION] file D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\input_dataset\input_test4.csv charset detected automatically: utf-8
+
+UTC/GMT+8hours:2023-11-07 23:04:23.761343
+[WARNING]: we turned all datavalues into string type in case losing the precision of data.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.765369
+[ParseError]: ParseError detected not by read_csv, but by self made method.
+Error tokenizing data. C error: EOF inside string starting at row 1.
+
+
+UTC/GMT+8hours:2023-11-07 23:04:23.769322
+[ERROR LINES EXTRACTION] error lines and correct lines are separated into 2 files for further reading.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.774308
+[ParserError]: [ParseError]: ParseError detected not by read_csv, but by self made method.
+Error tokenizing data. C error: EOF inside string starting at row 1.
+ 
+And the error lines weren't processed.
+Those error lines were stored as D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\input_dataset\input_test4_error_lines.csv.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.782286
+[IMPORT CSV]: data from D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\input_dataset\input_test4_originalcsv(error_deleted).csv is imported as reader generator for circular import in chunk size 50000.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.785280
+[COST TIME] the program <csv reading generator created> costed time: 0:00:00.031914
+
+UTC/GMT+8hours:2023-11-07 23:04:23.790264
+[COST TIME] the program <basic processing> costed time: 0:00:00
+
+UTC/GMT+8hours:2023-11-07 23:04:23.802026
+[EMPTY ROWS COUNT]: while processing, the program found 1 empty rows in dataframe.
+And those emtpy rows are deleted automatically.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.806017
+[CSV OUTPUT]: file created: D:\CODE-PROJECTS\PYTHON-PROJECTS\table-data-format-transform-app\output_dataset\input_test4.csv
+
+UTC/GMT+8hours:2023-11-07 23:04:23.810035
+[COST TIME] the program <store as csv> costed time: 0:00:00.009797
+
+UTC/GMT+8hours:2023-11-07 23:04:23.813033
+[NameError] for sql output, file name input_test4.csv must contains extension '.sql' as required.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.817023
+[DISTINCT TRANSFORMATION END] file 'input_test4.csv' is successfully transfered.
+
+UTC/GMT+8hours:2023-11-07 23:04:23.820978
+[COST TIME] the program <running single file transformation with same params_set> costed time: 0:00:00.094542
+
+UTC/GMT+8hours:2023-11-07 23:04:23.824967
+[THE END]: The data analysis process is successfully finished.
+[COST TIME]: The whole process costed time: 0:00:00.392831
+***************************************************
+
+
+
+
+UTC/GMT+8hours:2023-11-07 23:04:23.830021
+######################## 参数表'DEFAULT'的数据转换进程已顺利结束执行 ################################
+
+
+
+UTC/GMT+8hours:2023-11-07 23:04:23.833978
+
+*************************** 免责声明 ******************************
+    本程序遵循MIT开源协议, 如有疑问, 可依据以下链接查看源代码:
+    link: github.com/JamesHanZhang/table-data-format-transform-app
+    请用户自行负责校验数据转换质量
+******************************************************************
+
+
+UTC/GMT+8hours:2023-11-07 23:04:40.112179
+您目前采用的模式为: 
+3. <皆不一致模式> 不同表结构数据源采用不同的参数表, 需首先挨个搭建各个数据源对应的参数表, 再批量执行;
+    搭建参数表基于BASE_PARAMS_SET.json表进行修改, 其各个属性的含义与`_params_setting.py`一致;
+
+

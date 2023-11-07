@@ -1,0 +1,176 @@
+UTC/GMT+8hours:2023-11-06 23:45:35.738631
+您目前采用的模式为: 
+1. <表结构一致模式> 单参数表处理模式, 常用模式, 数据源的表结构一致时采用该模式处理数据转换;
+
+
+UTC/GMT+8hours:2023-11-06 23:45:51.785035
+######################## 围绕参数表'DEFAULT'的数据格式转换程序开始执行 ################################
+
+
+
+UTC/GMT+8hours:2023-11-06 23:45:51.794107
+[PARAMS] parameters initialization from settings, params set file 'DEFAULT.json' is created or overwritten.
+
+
+*****************************************
+***           PROGRAM STARTS          ***
+***       DATA-FORMAT-ANALYSIS-TOOL   ***
+***            VERSION:2.01           ***
+***         AUTHOR: JamesHanZhang     ***
+***       jameshanzhang@foxmail.com   ***
+*****************************************
+UTC/GMT+8hours:2023-11-06 23:45:51.804109
+***************************************************
+[PROGRAM STARTS]: program starts...
+
+UTC/GMT+8hours:2023-11-06 23:45:51.811089
+[PARAMS] parameters initialization from settings, params set file 'DEFAULT.json' is created or overwritten.
+
+UTC/GMT+8hours:2023-11-06 23:45:51.817113
+[INPUT ENCODING DETECTION] file D:\CODE-PROJECTS\PYTHON-PROJECTS\data-format-analysis-tool\input_dataset\test.csv charset detected automatically: utf-8
+
+UTC/GMT+8hours:2023-11-06 23:45:51.821152
+[WARNING]: we turned all datavalues into string type in case losing the precision of data.
+
+UTC/GMT+8hours:2023-11-06 23:45:51.826140
+[ParseError]: ParseError detected not by read_csv, but by self made method.
+Error tokenizing data. C error: EOF inside string starting at row 7.
+
+
+UTC/GMT+8hours:2023-11-06 23:45:51.830128
+[ERROR LINES EXTRACTION] error lines and correct lines are separated into 2 files for further reading.
+
+UTC/GMT+8hours:2023-11-06 23:45:51.836116
+[IMPORT CSV]: data from D:\CODE-PROJECTS\PYTHON-PROJECTS\data-format-analysis-tool\input_dataset\test.csv is imported as reader generator for circular import in chunk size 50000.
+
+UTC/GMT+8hours:2023-11-06 23:45:51.840074
+[COST TIME] the program <csv reading generator created> costed time: 0:00:00.022961
+
+UTC/GMT+8hours:2023-11-06 23:45:51.846058
+[COST TIME] the program <basic processing> costed time: 0:00:00
+
+UTC/GMT+8hours:2023-11-06 23:45:51.858217
+[CSV OUTPUT]: file created: D:\CODE-PROJECTS\PYTHON-PROJECTS\data-format-analysis-tool\output_dataset\test.csv
+
+UTC/GMT+8hours:2023-11-06 23:45:51.863167
+[COST TIME] the program <store as csv> costed time: 0:00:00.010292
+
+UTC/GMT+8hours:2023-11-06 23:45:52.117439
+[EXCEL OUTPUT]: file created: D:\CODE-PROJECTS\PYTHON-PROJECTS\data-format-analysis-tool\output_dataset\test.xlsx
+
+UTC/GMT+8hours:2023-11-06 23:45:52.122553
+[COST TIME] the program <store as excel> costed time: 0:00:00.253206
+
+UTC/GMT+8hours:2023-11-06 23:45:52.137918
+[MARKDOWN OUTPUT]: file created: D:\CODE-PROJECTS\PYTHON-PROJECTS\data-format-analysis-tool\output_dataset\test.md
+
+UTC/GMT+8hours:2023-11-06 23:45:52.141908
+[COST TIME] the program <store as markdown> costed time: 0:00:00.014000
+
+UTC/GMT+8hours:2023-11-06 23:45:52.160656
+[COST TIME] the program <store as sql table creation> costed time: 0:00:00.003992
+
+UTC/GMT+8hours:2023-11-06 23:45:52.164680
+[COST TIME] the program <store as sql insert commands> costed time: 0:00:00.016532
+
+UTC/GMT+8hours:2023-11-06 23:45:52.169675
+[THE END]: The data analysis process is successfully finished.
+[COST TIME]: The whole process costed time: 0:00:00.361573
+***************************************************
+
+
+
+
+UTC/GMT+8hours:2023-11-06 23:45:52.173621
+######################## 参数表'DEFAULT'的数据转换进程已顺利结束执行 ################################
+
+
+
+UTC/GMT+8hours:2023-11-06 23:51:40.842843
+您目前采用的模式为: 
+1. <表结构一致模式> 单参数表处理模式, 常用模式, 数据源的表结构一致时采用该模式处理数据转换;
+
+
+UTC/GMT+8hours:2023-11-06 23:51:51.129131
+######################## 围绕参数表'DEFAULT'的数据格式转换程序开始执行 ################################
+
+
+
+UTC/GMT+8hours:2023-11-06 23:51:51.145229
+[PARAMS] parameters initialization from settings, params set file 'DEFAULT.json' is created or overwritten.
+
+
+*****************************************
+***           PROGRAM STARTS          ***
+***       DATA-FORMAT-ANALYSIS-TOOL   ***
+***            VERSION:2.01           ***
+***         AUTHOR: JamesHanZhang     ***
+***       jameshanzhang@foxmail.com   ***
+*****************************************
+UTC/GMT+8hours:2023-11-06 23:51:51.159912
+***************************************************
+[PROGRAM STARTS]: program starts...
+
+UTC/GMT+8hours:2023-11-06 23:51:51.166912
+[PARAMS] parameters initialization from settings, params set file 'DEFAULT.json' is created or overwritten.
+
+UTC/GMT+8hours:2023-11-06 23:51:51.174289
+[INPUT ENCODING DETECTION] file D:\CODE-PROJECTS\PYTHON-PROJECTS\data-format-analysis-tool\input_dataset\input_test.csv charset detected automatically: utf-8
+
+UTC/GMT+8hours:2023-11-06 23:51:51.178314
+[WARNING]: we turned all datavalues into string type in case losing the precision of data.
+
+UTC/GMT+8hours:2023-11-06 23:51:51.183265
+[ParseError]: ParseError detected not by read_csv, but by self made method.
+Error tokenizing data. C error: EOF inside string starting at row 7.
+
+
+UTC/GMT+8hours:2023-11-06 23:51:51.187255
+[ERROR LINES EXTRACTION] error lines and correct lines are separated into 2 files for further reading.
+
+UTC/GMT+8hours:2023-11-06 23:51:51.193241
+[IMPORT CSV]: data from D:\CODE-PROJECTS\PYTHON-PROJECTS\data-format-analysis-tool\input_dataset\input_test.csv is imported as reader generator for circular import in chunk size 50000.
+
+UTC/GMT+8hours:2023-11-06 23:51:51.197257
+[COST TIME] the program <csv reading generator created> costed time: 0:00:00.023929
+
+UTC/GMT+8hours:2023-11-06 23:51:51.204210
+[COST TIME] the program <basic processing> costed time: 0:00:00
+
+UTC/GMT+8hours:2023-11-06 23:51:51.220155
+[CSV OUTPUT]: file created: D:\CODE-PROJECTS\PYTHON-PROJECTS\data-format-analysis-tool\output_dataset\output_test.csv
+
+UTC/GMT+8hours:2023-11-06 23:51:51.225184
+[COST TIME] the program <store as csv> costed time: 0:00:00.011016
+
+UTC/GMT+8hours:2023-11-06 23:51:51.495294
+[EXCEL OUTPUT]: file created: D:\CODE-PROJECTS\PYTHON-PROJECTS\data-format-analysis-tool\output_dataset\output_test.xlsx
+
+UTC/GMT+8hours:2023-11-06 23:51:51.499231
+[COST TIME] the program <store as excel> costed time: 0:00:00.257885
+
+UTC/GMT+8hours:2023-11-06 23:51:51.523263
+[MARKDOWN OUTPUT]: file created: D:\CODE-PROJECTS\PYTHON-PROJECTS\data-format-analysis-tool\output_dataset\output_test.md
+
+UTC/GMT+8hours:2023-11-06 23:51:51.527213
+[COST TIME] the program <store as markdown> costed time: 0:00:00.014033
+
+UTC/GMT+8hours:2023-11-06 23:51:51.553241
+[COST TIME] the program <store as sql table creation> costed time: 0:00:00.006944
+
+UTC/GMT+8hours:2023-11-06 23:51:51.558227
+[COST TIME] the program <store as sql insert commands> costed time: 0:00:00.020944
+
+UTC/GMT+8hours:2023-11-06 23:51:51.562217
+[THE END]: The data analysis process is successfully finished.
+[COST TIME]: The whole process costed time: 0:00:00.398315
+***************************************************
+
+
+
+
+UTC/GMT+8hours:2023-11-06 23:51:51.567330
+######################## 参数表'DEFAULT'的数据转换进程已顺利结束执行 ################################
+
+
+
