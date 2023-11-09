@@ -6,7 +6,7 @@ output_path = ""
 # 文件名不要有`.`, 以免被误识别为拓展名
 output_file = "output_test.csv"
 
-# 加载时的解码格式默认值：INPUT_ENCODE = "utf-8" 或者中文环境下常用"gbk"
+# 加载时的解码格式默认值：INPUT_ENCODE = "utf-8" 或者中文环境下常用"gbk", 如不填写, 导出默认为gb18030
 output_encoding = "gb18030"
 
 # 判断是否要拆分，如拆分，则按照导入的chunksize的大小进行拆分
@@ -22,7 +22,7 @@ csv_output_params = {
     'activation': True,
     'output_sep': ',',
     # 可能内容里也有该分隔符，容易导致错误，所以内容里该分隔符的部分可以替换为新的符号
-    'repl_to_sub_sep': ';',
+    'repl_to_sub_sep': '，',
     # 导入数据的记录条数, 等于几就表示从几开始增加, 默认为0, 表示从0开始增加计算
     'output_index_size': 0,
 }
