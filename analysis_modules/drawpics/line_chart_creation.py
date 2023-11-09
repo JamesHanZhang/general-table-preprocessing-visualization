@@ -2,6 +2,8 @@
 
 import pandas as pd
 from sqlite3 import connect
+import plotly.figure_factory as ff
+import plotly.express as px
 
 # self-made modules
 from analysis_modules.params_monitor import OutputParams

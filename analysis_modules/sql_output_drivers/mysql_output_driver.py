@@ -29,9 +29,15 @@ class MySqlOutputDriver(SqlOutputDriver):
         需要依据数据库的不同，重写的函数
         如果元素为datetime64的时候，元素在sql里应该怎么写
         """
-        if col_type == 'datetime64':
+        if 'datetime' in col_type:
             # 这里可能会因为实际需要需时常改动
-            element = f"STR_TO_DATE('{element}', '%Y-%m-%d %H:%i:%S')"
+            try:
+                date_format = self.to_date_formats[col]
+            except KeyError:
+                date_format = '%Y-%m-%d %H:%i:%S'
+            if date_format == "":
+                date_format = '%Y-%m-%d %H:%i:%S'
+            element = f"STR_TO_DATE('{element}', '{date_format}')"
         elif col_type == 'timedelta64':
             element = f"\'{str(element)}\'"
         return element

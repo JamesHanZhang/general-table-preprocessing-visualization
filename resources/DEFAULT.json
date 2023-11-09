@@ -1,12 +1,12 @@
 {
     "import_params": {
-        "input_path": "D:\\CODE-PROJECTS\\PYTHON-PROJECTS\\table-data-format-transform-app\\input_dataset",
-        "input_file": "input_test4.csv",
+        "input_path": "D:\\CODE-PROJECTS\\PYTHON-PROJECTS\\general-table-preprocessing-visualization\\input_dataset",
+        "input_file": "input_test3.csv",
         "input_encoding": "",
         "quote_as_object": true,
-        "if_circular": true,
+        "if_circular": false,
         "chunksize": 50000,
-        "import_index_size": 21,
+        "import_index_size": 0,
         "batch_import_params": {
             "if_batch": false,
             "import_type": ".csv"
@@ -23,8 +23,8 @@
         }
     },
     "output_params": {
-        "output_path": "D:\\CODE-PROJECTS\\PYTHON-PROJECTS\\table-data-format-transform-app\\output_dataset",
-        "output_file": "input_test4.csv",
+        "output_path": "D:\\CODE-PROJECTS\\PYTHON-PROJECTS\\general-table-preprocessing-visualization\\output_dataset",
+        "output_file": "output_test.csv",
         "output_encoding": "gb18030",
         "if_sep": false,
         "only_one_chunk": false,
@@ -37,8 +37,8 @@
         "csv_output_params": {
             "activation": true,
             "output_sep": ",",
-            "repl_to_sub_sep": ";",
-            "output_index_size": 21
+            "repl_to_sub_sep": "，",
+            "output_index_size": 0
         },
         "xls_output_params": {
             "activation": true,
@@ -47,7 +47,7 @@
         },
         "sql_output_params": {
             "activation": true,
-            "table_name": "input_test4",
+            "table_name": "table_for_temp_use",
             "table_comment": "临时表, 可删除",
             "table_structure": {},
             "column_comments": {},
@@ -59,6 +59,9 @@
                 "PostgreSql",
                 "SqlServer"
             ],
+            "to_date_formats": {
+                "column_name": "yyyy-mm-dd hh24:mi:ss"
+            },
             "repl_to_sub_comma": ";",
             "output_index_size": 0
         }
@@ -87,6 +90,12 @@
             "activation": false,
             "change_types": {
                 "column_name": "type_in_pandas"
+            },
+            "from_date_formats": {
+                "column_name": "%Y-%m-%d"
+            },
+            "to_date_formats": {
+                "column_name": "%Y-%m-%d"
             }
         },
         "pick_columns_opt": {

@@ -89,6 +89,7 @@ class OutputParams(ParamsBasicSetting):
         self.sql_output_params.column_comments = output_params['sql_output_params']['column_comments']
         self.sql_output_params.database = output_params['sql_output_params']['database']
         self.sql_output_params.database_options = output_params['sql_output_params']['database_options']
+        self.sql_output_params.to_date_formats = output_params['sql_output_params']['to_date_formats']
         self.sql_output_params.repl_to_sub_comma = output_params['sql_output_params']['repl_to_sub_comma']
         self.sql_output_params.output_index_size = output_params['sql_output_params']['output_index_size']
 
@@ -119,5 +120,6 @@ class OutputParams(ParamsBasicSetting):
             self.column_comments = oparams.sql_output_params['column_comments']
             self.database = oparams.sql_output_params['database']
             self.database_options = oparams.sql_output_params['database_options']
+            self.to_date_formats = oparams.sql_output_params['to_date_formats']
             self.repl_to_sub_comma = oparams.sql_output_params['repl_to_sub_comma']
             self.output_index_size = oparams.sql_output_params['output_index_size']

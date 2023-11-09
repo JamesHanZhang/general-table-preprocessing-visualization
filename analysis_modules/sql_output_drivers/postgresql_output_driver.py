@@ -30,9 +30,16 @@ class PostgreSqlOutputDriver(SqlOutputDriver):
         需要依据数据库的不同，重写的函数
         如果元素为datetime64的时候，元素在sql里应该怎么写
         """
-        if col_type == 'datetime64':
+        if 'datetime' in col_type:
             # 这里可能会因为实际需要需时常改动
-            element = f"TO_TIMESTAMP('{element}', 'YYYY-MM-DD HH:MI:SS')"
+            try:
+                date_format = self.to_date_formats[col]
+            except KeyError:
+                date_format = 'YYYY-MM-DD HH:MI:SS'
+            if date_format == "":
+                date_format = 'YYYY-MM-DD HH:MI:SS'
+            # 这里可能会因为实际需要需时常改动
+            element = f"TO_TIMESTAMP('{element}', '{date_format}')"
         elif col_type == 'timedelta64':
             element = f"'{element}'::TIME"
         return element

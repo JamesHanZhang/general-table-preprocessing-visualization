@@ -1,6 +1,8 @@
 
 import pandas as pd
 from sqlite3 import connect
+import plotly.figure_factory as ff
+import plotly.express as px
 
 # self-made modules
 from analysis_modules.params_monitor import OutputParams
@@ -21,7 +23,7 @@ class BarChartCreation(ImageCreation):
 
     def create_simple_bar_chart(self, data_frame, x, y, title=None, color=None, show=True):
         self.check_null_in_color(data_frame, color)
-        fig = drawpics.px.bar(data_frame, x, y, color=color, title=title, text_auto=True)
+        fig = px.bar(data_frame, x, y, color=color, title=title, text_auto=True)
         if show is True:
             fig.show()
         return fig

@@ -24,6 +24,7 @@ class SqlOutputDriver(DfOutputDriver):
         self.column_comments = output_params.sql_output_params.column_comments
         self.database = output_params.sql_output_params.database
         self.database_options = output_params.sql_output_params.database_options
+        self.to_date_formats = output_params.sql_output_params.to_date_formats
         self.repl_to_sub_comma = output_params.sql_output_params.repl_to_sub_comma
         # 最初的记录条数基底
         self.original_base_num = output_params.sql_output_params.output_index_size
@@ -107,7 +108,7 @@ class SqlOutputDriver(DfOutputDriver):
         elif col_type in num_types:
             return element
         # 时间的处理
-        elif col_type in self.time_list:
+        elif (col_type in self.time_list) or (col in self.to_date_formats.keys()):
             element = self.get_date_format_element(element, col, col_type)
         
         # 字符串的处理，替换掉逗号，以免影响最终数据

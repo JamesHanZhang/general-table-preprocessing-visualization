@@ -58,6 +58,8 @@ class BasicProcessParams(ParamsBasicSetting):
         
         self.change_types_opt.activation = basic_process_params['change_types_opt']['activation']
         self.change_types_opt.change_types = basic_process_params['change_types_opt']['change_types']
+        self.change_types_opt.from_date_formats = basic_process_params['change_types_opt']['from_date_formats']
+        self.change_types_opt.to_date_formats = basic_process_params['change_types_opt']['to_date_formats']
         
         self.pick_columns_opt.activation = basic_process_params['pick_columns_opt']['activation']
         self.pick_columns_opt.pick_columns = basic_process_params['pick_columns_opt']['pick_columns']
@@ -81,6 +83,8 @@ class BasicProcessParams(ParamsBasicSetting):
         def __init__(self):
             self.activation = bproparams.change_types_opt['activation']
             self.change_types = bproparams.change_types_opt['change_types']
+            self.from_date_formats = bproparams.change_types_opt['from_date_formats']
+            self.to_date_formats = bproparams.change_types_opt['to_date_formats']
     
     class PickColumnsOpt:
         def __init__(self):

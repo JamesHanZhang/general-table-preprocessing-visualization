@@ -62,10 +62,48 @@ class BasicProcessing:
         df = df[pick_columns]
         SysLog.show_log("[CERTAIN COLUMNS PICKED]: {0} columns picked from dataframe".format(str(pick_columns)))
         return df
-
+    
+    @staticmethod
+    def turn_str_to_date_format(df: pd.DataFrame, col: str, date_format='%Y-%m-%d'):
+        dtypes = df.dtypes.to_dict()
+        if dtypes[col] == 'object':
+            df[col] = pd.to_datetime(df[col], format=date_format)
+            return df
+        raise TypeError(f"type for column {col} must be object in pandas, which is now type {dtypes[col]}.")
+    
+    @staticmethod
+    def turn_date_format_to_str(df: pd.DataFrame, col: str, date_format='%Y-%m-%d'):
+        dtypes = df.dtypes.to_dict()
+        if 'datetime' in str(dtypes[col]):
+            df[col] = df[col].dt.strftime(date_format)
+            return df
+        raise TypeError(f"type for column {col} must be datetime type in pandas, which is now type {str(dtypes[col])}.")
+    
+    @classmethod
+    def change_date_types(cls, df: pd.DataFrame, change_types, from_date_formats={}, to_date_formats={})-> tuple[pd.DataFrame, dict]:
+        # 特殊情况, 时间转换, 先过一遍时间转换的需求,
+        df_dtypes = df.dtypes.to_dict()
+        no_date_change_types = dict()
+        for column in change_types.keys():
+            if 'datetime' in str(df_dtypes[column]):
+                try:
+                    date_format = from_date_formats[column]
+                except KeyError:
+                    date_format = '%Y-%m-%d'
+                df = cls.turn_date_format_to_str(df, column, date_format)
+            if 'datetime' in change_types[column]:
+                try:
+                    date_format = to_date_formats[column]
+                except KeyError:
+                    date_format = '%Y-%m-%d'
+                df = cls.turn_str_to_date_format(df, column, date_format)
+            else:
+                no_date_change_types[column] = change_types[column]
+        return df, no_date_change_types
+    
     @classmethod
     @SysLog().calculate_cost_time("<change column types>")
-    def change_column_types(cls, df, change_types):
+    def change_column_types(cls, df, change_types, from_date_formats:dict={}, to_date_formats:dict={}) -> pd.DataFrame:
         """
         :param df: dataframe
         :param change_types: dict, key is column name, while value is target type
@@ -73,7 +111,10 @@ class BasicProcessing:
         """
         repl_null = False
         columns = df.columns.tolist()
-        for column in list(change_types.keys()):
+        # 先过一遍时间类型转换的需求
+        df, change_types = cls.change_date_types(df, change_types, from_date_formats, to_date_formats)
+        
+        for column in change_types.keys():
             # 一次只修改一列类型，这样即便错误，也只针对这列进行空值转换
             if column in columns:
                 change_type = dict()
@@ -137,11 +178,25 @@ class BasicProcessing:
             elif func_app == 'change_names_finally' and basic_process_params.change_names_finally.activation is True:
                 df = cls.change_column_names(df, basic_process_params.change_names_finally.change_names)
             elif func_app == 'change_types_opt' and basic_process_params.change_types_opt.activation is True:
-                df = cls.change_column_types(df, basic_process_params.change_types_opt.change_types)
+                change_types = basic_process_params.change_types_opt.change_types
+                from_date_formats = basic_process_params.change_types_opt.from_date_formats
+                to_date_formats = basic_process_params.change_types_opt.to_date_formats
+                df = cls.change_column_types(df, change_types, from_date_formats, to_date_formats)
             elif func_app == 'pick_columns_opt' and basic_process_params.pick_columns_opt.activation is True:
                 df = cls.pick_columns(df, basic_process_params.pick_columns_opt.pick_columns)
             elif func_app == 'data_masking_opt' and basic_process_params.data_masking_opt.activation is True:
                 df = dm.data_masking(df, basic_process_params.data_masking_opt.masking_columns, basic_process_params.data_masking_opt.masking_type)
         return df
 
-
+if __name__=='__main__':
+    data = {
+        'Task': ['Task A', 'Task B', 'Task C', 'Task D'],
+        'Start': ['2023-01-01', '2023-01-02', '2023-01-03', '2023-01-04'],
+        'End': ['2023-01-05', '2023-01-06', '2023-01-07', '2023-01-08']
+    }
+    
+    df = pd.DataFrame(data)
+    print(str(df['Task'].dtype))
+    df = BasicProcessing.turn_str_to_date_format(df, 'Start','%Y-%m-%d')
+    df = BasicProcessing.turn_date_format_to_str(df, 'Start','%Y%m%d')
+    print(df)
