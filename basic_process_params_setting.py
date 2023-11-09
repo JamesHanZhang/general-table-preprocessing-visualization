@@ -25,13 +25,13 @@ change_types_opt = {
     'change_types': {
         'column_name': 'type_in_pandas',
     },
-    # 如果导入数据中有时间类型的话, 需要先转换成str才能继续执行
-    # if data type for certain columns in imported data waiting for type change, it's better to turn the date type into string type firstly.
+    # how to turn datetime type data to object
+    # 用来设置如何将datetime类型的数据转为字符串, 其数据转换必须在change_types里先提到: '列': 'object', 然后这个列是datetime类型
     'from_date_formats': {
         'column_name': '%Y-%m-%d', # date-format in pandas
     },
-    # 如果导出的数据中有时间类型的话，需要注意希望转换成的时间结构
-    # if output as datetime, you must focus on how to do the date format transformation
+    # how to turn object to certain datetime type data
+    # 用来设置如何将字段从字符串转为datetime数据类型, 其数据转换必须在change_types里先提到: '列': 'datetime64', 然后这个列是object类型
     'to_date_formats': {
         'column_name': '%Y-%m-%d', # date-format in pandas
     }
