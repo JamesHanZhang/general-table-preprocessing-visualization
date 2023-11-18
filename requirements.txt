@@ -1,0 +1,9 @@
+# python的版本
+python_version >= "3.11.5"
+# 如果是anaconda的环境, 则anaconda的版本为: anaconda_version >= "23.9.0"
+
+pandas >= 2.1.2
+tqdm >= 4.66.1
+chardet >= 5.2.0
+numpy >= 1.26.1
+pyinstaller >= 6.2.0
