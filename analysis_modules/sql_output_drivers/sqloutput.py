@@ -1,4 +1,3 @@
-
 import pandas as pd
 import os
 import time
@@ -11,15 +10,18 @@ from analysis_modules.sql_output_drivers.mysql_output_driver import MySqlOutputD
 from analysis_modules.sql_output_drivers.gbase_output_driver import GBaseOutputDriver
 from analysis_modules.sql_output_drivers.postgresql_output_driver import PostgreSqlOutputDriver
 from analysis_modules.sql_output_drivers.sqlserver_output_driver import SqlServerOutputDriver
+from analysis_modules.sql_output_drivers.tdsql_output_driver import TdSqlOutputDriver
+
 
 class SqlOutput:
     def __init__(self):
         pass
     
-    def init_store_output_params(self, output_params: OutputParams, params_set:str=prop.DEFAULT_PARAMS_SET, table_name="",
+    def init_store_output_params(self, output_params: OutputParams, params_set: str = prop.DEFAULT_PARAMS_SET,
+                                 table_name="",
                                  database="", output_path="", output_encoding="", overwrite: bool = None,
                                  if_sep: bool = None, only_one_chunk: bool = None, table_comment="",
-                               column_comments={}, repl_to_sub_comma:str=None):
+                                 column_comments={}, repl_to_sub_comma: str = None):
         if table_name != "":
             output_params.sql_output_params.table_name = table_name
         if table_comment != "":
@@ -29,7 +31,8 @@ class SqlOutput:
         if os.path.isabs(output_path):
             output_params.output_path = output_path
         if output_encoding != "":
-            output_params.output_encoding = output_params.check_if_encoding(output_encoding, output_params.output_encoding)
+            output_params.output_encoding = output_params.check_if_encoding(output_encoding,
+                                                                            output_params.output_encoding)
         if overwrite is not None and type(overwrite) is bool:
             output_params.overwrite = overwrite
         if if_sep is not None and type(if_sep) is bool:
@@ -64,8 +67,11 @@ class SqlOutput:
             self.sql_out_driver = PostgreSqlOutputDriver(output_params, params_set)
         elif self.database == "SqlServer":
             self.sql_out_driver = SqlServerOutputDriver(output_params, params_set)
+        elif self.database == "TdSql":
+            self.sql_out_driver = TdSqlOutputDriver(output_params, params_set)
         else:
-            raise TypeError("[TypeError] the database you choose didn't follow the rule in the list of database choices.")
+            raise TypeError(
+                "[TypeError] the database you choose didn't follow the rule in the list of database choices.")
         output_params.store_output_params(params_set)
     
     @staticmethod
@@ -76,14 +82,15 @@ class SqlOutput:
         IoMethods.mkdir_if_no_dir(output_path)
         return output_path
     
-    def count_row_num(self, df:pd.DataFrame, output_params: OutputParams, params_set:str=prop.DEFAULT_PARAMS_SET):
+    def count_row_num(self, df: pd.DataFrame, output_params: OutputParams, params_set: str = prop.DEFAULT_PARAMS_SET):
         output_params.sql_output_params.output_index_size += df.index.size
         output_params.store_output_params(params_set)
     
-    def output_sql(self, df: pd.DataFrame, output_params: OutputParams, params_set=prop.DEFAULT_PARAMS_SET, table_name="",
-                                 database="", output_path="", output_encoding="", overwrite: bool = None,
-                                 if_sep: bool = None, only_one_chunk: bool = None, table_comment="",
-                               column_comments={}, repl_to_sub_comma:str=None, chunk_no:int=""):
+    def output_sql(self, df: pd.DataFrame, output_params: OutputParams, params_set=prop.DEFAULT_PARAMS_SET,
+                   table_name="",
+                   database="", output_path="", output_encoding="", overwrite: bool = None,
+                   if_sep: bool = None, only_one_chunk: bool = None, table_comment="",
+                   column_comments={}, repl_to_sub_comma: str = None, chunk_no: int = ""):
         # 将修改的参数保存
         self.init_store_output_params(output_params, params_set, table_name=table_name, database=database,
                                       output_path=output_path, output_encoding=output_encoding, overwrite=overwrite,
@@ -92,7 +99,7 @@ class SqlOutput:
         # 记录条数
         self.count_row_num(df, output_params, params_set)
         
-        if self.if_sep is True and type(chunk_no) is str and chunk_no=="":
+        if self.if_sep is True and type(chunk_no) is str and chunk_no == "":
             # 整体拆分
             self.sql_out_driver.sep_df_as_multi_sql(df, output_path=self.output_path)
         else:
@@ -108,8 +115,8 @@ class SqlOutput:
     
     def output_sql_on_extension(self, df: pd.DataFrame, output_params: OutputParams, params_set=prop.DEFAULT_PARAMS_SET,
                                 output_file="", database="", output_path="", output_encoding="", overwrite: bool = None,
-                                 if_sep: bool = None, only_one_chunk: bool = None, table_comment="",
-                               column_comments={}, repl_to_sub_comma:str=None, chunk_no:int=""):
+                                if_sep: bool = None, only_one_chunk: bool = None, table_comment="",
+                                column_comments={}, repl_to_sub_comma: str = None, chunk_no: int = ""):
         """
         :param output_file: 如果文件的拓展名为.sql，则自动将文件名主体作为导出的表名
         :param table_name: 自动被文件主体名覆盖
@@ -122,16 +129,20 @@ class SqlOutput:
         table_name = IoMethods.get_main_file_name(output_file)
         
         # 执行导出
-        self.output_sql(df, output_params, params_set, table_name=table_name, database=database, output_path=output_path,
-                        output_encoding=output_encoding, overwrite=overwrite, if_sep=if_sep, only_one_chunk=only_one_chunk,
-                        table_comment=table_comment, column_comments=column_comments, repl_to_sub_comma=repl_to_sub_comma,
+        self.output_sql(df, output_params, params_set, table_name=table_name, database=database,
+                        output_path=output_path,
+                        output_encoding=output_encoding, overwrite=overwrite, if_sep=if_sep,
+                        only_one_chunk=only_one_chunk,
+                        table_comment=table_comment, column_comments=column_comments,
+                        repl_to_sub_comma=repl_to_sub_comma,
                         chunk_no=chunk_no)
         return
     
-    def output_sql_on_activation(self, df: pd.DataFrame, output_params: OutputParams, params_set=prop.DEFAULT_PARAMS_SET, table_name="",
+    def output_sql_on_activation(self, df: pd.DataFrame, output_params: OutputParams,
+                                 params_set=prop.DEFAULT_PARAMS_SET, table_name="",
                                  database="", output_path="", output_encoding="", overwrite: bool = None,
                                  if_sep: bool = None, only_one_chunk: bool = None, table_comment="",
-                               column_comments={}, repl_to_sub_comma:str=None, chunk_no:int=""):
+                                 column_comments={}, repl_to_sub_comma: str = None, chunk_no: int = ""):
         if output_params.sql_output_params.activation is True:
             # 执行导出
             self.output_sql(df, output_params, params_set, table_name=table_name, database=database,
@@ -144,5 +155,4 @@ class SqlOutput:
         else:
             SysLog.show_log("[NOT ACTIVATED OUTPUT TYPE] output sql is not activated!")
         return
-        
-        
+
