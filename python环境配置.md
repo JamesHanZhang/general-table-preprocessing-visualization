@@ -280,3 +280,142 @@ sys.path.append(path)
 ```
 3. 如果该项目中运行有调用相对路径，相对路径会自动识别为Spyder的默认安装路径，从而导致程序执行失败；考虑到修改默认路径的繁琐，不推荐使用Spyder运行项目；
 
+## 依赖包配置
+
+### 首先查看各个包的版本号
+#### 直接通过`pip`查看
+- 每调用一个包，请预先判断该包是内置包，还是外包，如果是外包，可以通过以下命令查看该包的版本号：
+```bash
+pip show package-name
+```
+
+案例：
+```bash
+pip show requests
+```
+#### 在anaconda环境查看包的版本号
+- 直接查看所有的包
+```bash
+conda list
+```
+- Linux bash查看
+```bash
+conda list | grep package-name
+```
+- windows查看
+```bash
+conda list | findstr package-name
+```
+将 `package-name` 替换为你要查看的包名。这将显示包含指定名称的包的版本信息。
+### `requirements.txt`依赖包配置
+- `requirements.txt`: 这是一个文本文件，其中每一行都包含一个依赖包的名称和版本号，格式通常为：
+```bash
+# 可以通过#添加注释
+package-name==version
+```
+
+例如：
+```
+requests==2.26.0
+Flask==2.0.1
+```
+
+- **\=\=**：等于某个版本。
+- `>=`：大于等于某个版本。
+- `<=`：小于等于某个版本。
+- `<`：小于某个版本。
+- `>`：大于某个版本。
+#### 调用该文件
+- 调用配置文件: 进入该配置文件的所在目录，在终端使用命令行直接配置；
+- 如果开发者的环境是anaconda，请先通过`conda list`命令查看其已拥有的依赖包，再删减`requirements.txt`里的依赖包的内容，以保证无重复安装的情况；且采用独立虚拟环境安装依赖包；
+```bash
+# 安装所有依赖包的命令
+pip install -r requirements.txt
+```
+### `Pipfile`依赖包配置
+#### 前提：安装`pipenv`包
+请先确保已经安装了`pipenv`，如果没有的话，则通过以下命令先安装：
+```bash
+pip install pipenv
+```
+
+#### 使用方法
+
+`Pipfile` 是使用 `Pipenv` 管理项目依赖的一种方式。它通常包含了项目的依赖和开发依赖，并且会指定版本范围而不是精确的版本号。首先在项目的根目录下新建无拓展名的文本文件`Pipfile`，然后在里面新增内容。示例 `Pipfile` 文件：
+
+```bash
+[[source]]
+# 通过#来写注释, 注意, 注释不能连续多行, 否则报错UnicodeDecodeError
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+# 主要依赖项
+requests = "==2.26.0"
+Flask = "==2.0.1"
+
+[dev-packages]
+# 开发依赖项
+pytest = "*"
+
+[requires]
+# Python版本需求
+# 指定版本则这样写: python_version = "3.11.5"
+# 大于等于某个版本这样写: python_version = ">=3.11.5"
+python_version = ">=3.11.5"
+```
+
+在这个示例中，
+- `[[source]]`区块定义从哪里获取软件包，一般是固定的，无需更改。一个软件包源（source）是包含 Python 软件包的仓库或索引，通常是一个 URL。
+	- `url` 表示软件包的源的 URL，这里是 Python Package Index（PyPI）的 URL。PyPI 是 Python 的官方软件包索引，包含了大量的 Python 软件包供开发者使用。
+	- `verify_ssl` 是一个布尔值，表示是否要验证 SSL 证书。在大多数情况下，你会希望设置为 `true`，以确保通过加密通信下载软件包。
+	- `name` 是源的名称，这里是 "pypi"。这个名称在 Pipenv 中没有太多实际作用，但它是源的唯一标识符。
+- `[packages]` 区块定义了项目的正常运行时所需的依赖; 
+- `[dev-packages]` 区块定义了开发时需要的额外依赖。使用 `pipenv install` 命令可以根据这个文件来安装依赖。
+	- `pytest = "*"` 是 `Pipfile` 中对依赖的版本规范的一种写法。在这里，**它表示安装 `pytest` 这个软件包的最新版本**，而不是指定一个具体的版本号。
+- `[requires]`用来确定项目运行的python版本号;
+
+#### 安装依赖包
+- 在根目录路径的终端内使用 `pipenv install` 命令可以根据 `Pipfile` 安装所有的依赖。
+```bash
+pipenv install
+```
+
+**注意**：`Pipenv` 还会生成一个 `Pipfile.lock` 文件，用于锁定依赖的确切版本，以确保在不同的环境中使用相同的依赖版本。这个文件通常不需要手动编辑，而是由 `Pipenv` 自动生成和管理。
+
+### 注意! 如果是anaconda环境, 需使用独立虚拟环境
+在 Anaconda 环境中，通常你可以使用 `conda` 命令来创建虚拟环境并安装依赖项，因为上述依赖通常是为`pip`准备的，所以为了避免影响到anaconda本身环境的依赖关系，需要新建一个独立虚拟环境。
+
+```bash
+# 查看所有环境，带*号的是目前所处的环境
+conda info --envs
+
+# 新建独立虚拟环境，这里james_environment是自己设定的虚拟环境的名字
+conda create --name james_environment
+
+# 详细建立独立虚拟环境
+## 明确python版本
+python --version
+## python要明确所需的版本号
+conda create --name <conda_environment_name> python=python_version
+## 案例
+conda create --name james_environment python=3.11.5
+
+# 调用独立虚拟环境
+conda activate james_environment
+
+# 在独立虚拟环境内安装依赖包
+pip install -r requirements.txt
+
+# 退出独立虚拟环境，退出当前环境
+conda deactivate
+
+# 删除独立虚拟环境
+## 需要`--name` flag
+conda env delete --name james_environment
+## 也可以使用`-n`flag
+conda env delete -n james_environment
+## 也可以使用`remove`命令
+conda env remove -n james_environment
+```
