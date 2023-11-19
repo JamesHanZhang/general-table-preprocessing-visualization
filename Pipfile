@@ -1,22 +1,18 @@
+# -*- coding: utf-8 -*-
 [[source]]
 url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
 [packages]
-# 主要依赖项
 pandas = ">=2.1.2"
 tqdm = ">=4.66.1"
 chardet = ">=5.2.0"
 numpy = ">=1.26.1"
 
 [dev-packages]
-# 开发依赖项
 pytest = "*"
 pyinstaller = "*"
 
 [requires]
-# Python版本需求
-# 指定版本则这样写: python_version = "3.11.5"
-# 大于等于某个版本这样写: python_version = ">=3.11.5"
 python_version = ">=3.11.5"
